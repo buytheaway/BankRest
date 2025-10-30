@@ -1,0 +1,8 @@
+﻿openapi: 3.0.3
+info:
+  title: Bank REST
+  version: 0.0.1
+  description: Minimal API for auth, cards CRUD (admin), own cards listing & transfers (user). Live docs at /swagger-ui.html
+servers:
+  - url: http://localhost:8080
+paths: {}

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.23.xsd">
+
+  <changeSet id="001-users" author="ai">
+    <createTable tableName="app_user">
+      <column name="id" type="BIGSERIAL"><constraints primaryKey="true" nullable="false"/></column>
+      <column name="username" type="VARCHAR(100)"><constraints nullable="false" unique="true"/></column>
+      <column name="password" type="VARCHAR(200)"><constraints nullable="false"/></column>
+      <column name="role" type="VARCHAR(20)"><constraints nullable="false"/></column>
+      <column name="enabled" type="BOOLEAN" defaultValueBoolean="true"><constraints nullable="false"/></column>
+    </createTable>
+  </changeSet>
+
+  <changeSet id="002-cards" author="ai">
+    <createTable tableName="card">
+      <column name="id" type="BIGSERIAL"><constraints primaryKey="true" nullable="false"/></column>
+      <column name="owner_id" type="BIGINT"><constraints nullable="false" foreignKeyName="fk_card_owner" referencedTableName="app_user" referencedColumnNames="id"/></column>
+      <column name="number_enc" type="TEXT"><constraints nullable="false" unique="true"/></column>
+      <column name="expiry_month" type="INT"><constraints nullable="false"/></column>
+      <column name="expiry_year" type="INT"><constraints nullable="false"/></column>
+      <column name="status" type="VARCHAR(20)" defaultValue="ACTIVE"><constraints nullable="false"/></column>
+      <column name="balance" type="NUMERIC(19,2)" defaultValueNumeric="0.00"><constraints nullable="false"/></column>
+      <column name="block_requested" type="BOOLEAN" defaultValueBoolean="false"><constraints nullable="false"/></column>
+    </createTable>
+    <createIndex indexName="idx_card_owner" tableName="card"><column name="owner_id"/></createIndex>
+  </changeSet>
+
+</databaseChangeLog>
