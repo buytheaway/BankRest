@@ -1,4 +1,4 @@
-﻿package com.bankrest.exception;
+package com.bankrest.exception;
 import org.springframework.http.*; import org.springframework.web.bind.MethodArgumentNotValidException; import org.springframework.web.bind.annotation.*; import java.util.*;
 @ControllerAdvice
 public class GlobalExceptionHandler {

@@ -1,4 +1,4 @@
-﻿package com.bankrest.service;
+package com.bankrest.service;
 import com.bankrest.domain.CardStatus; import com.bankrest.entity.CardEntity; import com.bankrest.entity.UserEntity; import com.bankrest.repo.CardRepository; import com.bankrest.repo.UserRepository; import com.bankrest.util.Masking;
 import jakarta.transaction.Transactional; import org.springframework.data.domain.*; import org.springframework.stereotype.Service;
 import java.math.BigDecimal; import java.util.NoSuchElementException;

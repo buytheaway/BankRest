@@ -1,4 +1,4 @@
-﻿package com.bankrest.security;
+package com.bankrest.security;
 import jakarta.persistence.AttributeConverter; import jakarta.persistence.Converter;
 import javax.crypto.Cipher; import javax.crypto.spec.GCMParameterSpec; import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets; import java.security.SecureRandom; import java.util.Base64;

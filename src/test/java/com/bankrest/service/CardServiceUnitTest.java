@@ -1,4 +1,4 @@
-﻿package com.bankrest.service;
+package com.bankrest.service;
 import com.bankrest.domain.CardStatus; import com.bankrest.entity.CardEntity; import com.bankrest.entity.UserEntity; import com.bankrest.repo.CardRepository; import com.bankrest.repo.UserRepository;
 import org.junit.jupiter.api.*; import org.mockito.Mockito; import java.math.BigDecimal; import java.util.Optional;
 class CardServiceUnitTest {

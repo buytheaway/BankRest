@@ -1,4 +1,4 @@
-﻿package com.bankrest.controller;
+package com.bankrest.controller;
 import com.bankrest.dto.*; import com.bankrest.repo.UserRepository; import com.bankrest.security.JwtUtil;
 import org.springframework.http.ResponseEntity; import org.springframework.security.authentication.AuthenticationManager; import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException; import org.springframework.web.bind.annotation.*;

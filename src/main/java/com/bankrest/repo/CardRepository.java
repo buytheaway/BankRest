@@ -1,4 +1,4 @@
-﻿package com.bankrest.repo;
+package com.bankrest.repo;
 import com.bankrest.entity.CardEntity; import com.bankrest.entity.UserEntity;
 import org.springframework.data.domain.Page; import org.springframework.data.domain.Pageable; import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-﻿package com.bankrest.entity;
+package com.bankrest.entity;
 import com.bankrest.domain.UserRole; import jakarta.persistence.*; import lombok.*;
 @Entity @Table(name="app_user")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder

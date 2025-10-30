@@ -1,4 +1,4 @@
-﻿package com.bankrest.entity;
+package com.bankrest.entity;
 import com.bankrest.domain.CardStatus; import com.bankrest.security.AttributeEncryptor;
 import jakarta.persistence.*; import lombok.*; import java.math.BigDecimal; import java.time.YearMonth;
 @Entity @Table(name="card")

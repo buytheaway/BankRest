@@ -1,4 +1,4 @@
-﻿package com.bankrest.controller;
+package com.bankrest.controller;
 import com.bankrest.dto.*; import com.bankrest.service.CardService; import com.bankrest.repo.UserRepository; import jakarta.validation.Valid;
 import org.springframework.security.core.Authentication; import org.springframework.web.bind.annotation.*; import org.springframework.data.domain.PageRequest;
 @RestController @RequestMapping("/api/user")

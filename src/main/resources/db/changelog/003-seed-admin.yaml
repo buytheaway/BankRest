@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003-seed-admin
+      author: gpt
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: MARK_RAN
+        - tableIsEmpty:
+            tableName: app_user
+      changes:
+        - insert:
+            tableName: app_user
+            columns:
+              - column: { name: id,        valueNumeric: 1 }
+              - column: { name: username,  value: "admin" }
+              - column: { name: password,  value: "{noop}admin123" }
+              - column: { name: role,      value: "ADMIN" }
+              - column: { name: enabled,   valueBoolean: true }

@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004-rename-cards-to-card
+      author: gpt
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: MARK_RAN
+        - tableExists:
+            tableName: cards
+      changes:
+        - renameTable:
+            oldTableName: cards
+            newTableName: card

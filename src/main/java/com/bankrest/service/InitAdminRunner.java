@@ -1,4 +1,4 @@
-﻿package com.bankrest.service;
+package com.bankrest.service;
 import com.bankrest.domain.UserRole; import com.bankrest.entity.UserEntity; import com.bankrest.repo.UserRepository;
 import org.springframework.boot.CommandLineRunner; import org.springframework.stereotype.Component; import org.springframework.security.crypto.password.PasswordEncoder;
 @Component

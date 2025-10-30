@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-rename-users-to-app_user
+      author: gpt
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: MARK_RAN
+        - onUpdateSQL: MARK_RAN
+        - tableExists:
+            tableName: users
+      changes:
+        - renameTable:
+            oldTableName: users
+            newTableName: app_user
+
+  - changeSet:
+      id: 002-fix-fk-cards-owner
+      author: gpt
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: MARK_RAN
+        - tableExists:
+            tableName: cards
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: cards
+            constraintName: fk_cards_owner
+        - addForeignKeyConstraint:
+            baseTableName: cards
+            baseColumnNames: owner_id
+            constraintName: fk_cards_owner
+            referencedTableName: app_user
+            referencedColumnNames: id
+            onDelete: CASCADE
